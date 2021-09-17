@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Temperature Hot</title>
+    <title>Temperature Check</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,6 +15,9 @@
             background-size: cover;
             height: 100vh;
         }
+        #display {
+            display: none;
+        }
     </style>
 </head>
 
@@ -22,20 +25,20 @@
     <div class="container">
         <form class="col-md-6 m-auto py-5">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Enter a location for Weather ...">
+                <input type="text" id="location-input" class="form-control" placeholder="Enter a location for Weather ...">
                 <div class="input-group-append">
-                    <button type="button" class="btn btn-danger">Search</button>
+                    <button type="button" class="btn btn-danger" id="search-btn">Search</button>
                 </div>
             </div>
         </form>
-        <div class="weather-status text-white text-center">
-            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
-            <h1>Dhaka</h1>
-            <h3><span>38.06</span>&deg;C</h3>
-            <h1 class="lead">Clouds</h1>
+        <div class="weather-status text-white text-center" id="display">
+            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="" id="sky-image">
+            <h1 id="city-name">Loading..</h1>
+            <h3><span id="temp-unit">weather-status</span>&deg;C</h3>
+            <h1 class="lead" id="lead"></h1>
         </div>
     </div>
-
+<script src="script.js"></script>
 </body>
 
 </html>
